@@ -1,10 +1,10 @@
-import { Component } from "@angular/core";
+import { Component } from '@angular/core';
 
 @Component({
-    selector: 'mobile-create',
+    selector: 'mobile-create-component',
     templateUrl: 'mobile.component.html',
-    styleUrls: ['mobile.component.scss']
+    styleUrls: ['mobile.component.css']
 })
-export class MobileCreateComponent{
-    
+export class MobileCreateComponent  {
+
 }
