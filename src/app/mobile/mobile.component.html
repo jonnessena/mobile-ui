@@ -3,30 +3,30 @@
 </mat-toolbar>
 
 <div display="flex" style="align-items: center; flex-direction: column;">
-    <form>
+    <form [formGroup]"createForm">
         <div>
             <mat-input-container >
               <label>Modelo</label>
-              <input type="text" matInput style="border-style:solid;">
+              <input type="text" matInput style="border-style:solid;" formControlName="model">
             </mat-input-container>
             <mat-input-container >
                 <label>Preço</label>
-                <input type="text" matInput style="border-style:solid;">
+                <input type="text" matInput style="border-style:solid;" formControlName="price">
             </mat-input-container>
             <mat-input-container >
                 <label>Marca</label>
-                <input type="text" matInput style="border-style:solid;">
+                <input type="text" matInput style="border-style:solid;" formControlName="brand">
             </mat-input-container>
             <mat-input-container >
                 <label>Url da Foto</label>
-                <input type="text" matInput style="border-style:solid;">
+                <input type="text" matInput style="border-style:solid;" formControlName="imageLink">
             </mat-input-container>
             <mat-input-container >
                 <label>Data</label>
-                <input type="text" matInput style="border-style:solid;">
+                <input type="text" matInput style="border-style:solid;" formControlName="date">
             </mat-input-container>
             <div class="button-row">
-                <button mat-button color="primary">Cadastrar </button>
+                <button mat-button color="primary" (click)="create()">Cadastrar </button>
             </div>
         </div>
     </form>
