@@ -3,15 +3,17 @@ import { Observable } from 'rxjs/Observable';
 import { MobileRepository } from '../core/repository';
 import { Injectable } from '@angular/core';
 
+const host = 'http://localhost:8080';
+
 @Injectable()
 export class MobileService {
     constructor( private readonly repository: MobileRepository) {}
 
     listMobiles(): Observable<Mobile[]> {
-        return this.repository.get('http://localhost:4200/claro/mobile');
+        return this.repository.get(`${host}/claro/mobile`);
     }
 
     create(mobile: Mobile): Observable<Mobile> {
-        return this.repository.create('/claro/mobile', mobile);
+        return this.repository.create(`${host}/claro/mobile`, mobile);
     }
 }

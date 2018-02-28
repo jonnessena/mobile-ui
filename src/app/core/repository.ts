@@ -7,7 +7,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class MobileRepository {
     constructor(private readonly http: Http) {}
-    
+
     get(url: string, attr?: string): Observable<Mobile[]> {
         return this.http.get(url)
         .pipe(map( response => {
@@ -24,7 +24,7 @@ export class MobileRepository {
     }
 
     create(url: string, body: Mobile): Observable<Mobile> {
-        return this.http.put(url, body)
+        return this.http.post(url, body)
         .pipe(map( response => {
             return response.json().map(item => {
                 return Object.assign(new Mobile(), {
@@ -37,5 +37,4 @@ export class MobileRepository {
             });
         }));
     }
-
 }
