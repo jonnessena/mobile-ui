@@ -40,7 +40,7 @@ import {
     MatAutocompleteModule } from '@angular/material';
     import { CommonModule } from '@angular/common';
     import { MobileRepository } from '../core/repository';
-    
+
     @NgModule({
         imports: [
             FormsModule,
@@ -84,5 +84,4 @@ import {
         declarations: [MobileCreateComponent],
         providers: [MobileService, MobileRepository]
     })
-    export class MobileCreateModule {}
-    
+    export class MobileCreateModule { }
